@@ -1,0 +1,183 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+ 
+
+@section scripts{
+        @Scripts.Render("~/Scripts/MyScript/Index/Index.js")
+    }
+
+@section style{
+    @Styles.Render("~/Content/MyCss/IndexController/Index.css");
+}
+
+<!-- the hero section to display the heros-->
+<section class="hero" ng-controller="HeroSection">
+    <div class="container">
+        <div class="caption">
+            <h1 class="text-uppercase animated fadeInLeft">Dota2 Heros</h1>
+            <input type="text"  ng-model="HeroNameSearch" />
+        </div>
+    </div>
+
+</section>
+<!-- end of the hero section-->
+
+<section class="about" id="about" ng-controller="aboutController">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6"><i class="play_icon" ng-click="PlayVideo()"></i><span>Play video</span></div>
+            <div class="col-md-6 video_place">
+
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+
+
+
+
+
+<!-- email subscribed section-->
+<section class="sub_box" ng-controller="subscribedController">
+    <p class="cta_text animated wow fadeInUp">Join Our List and stay updated.</p>
+    <ng-form name="emailSubscript" onsubmit="subscribed()" class="animated wow fadeIn" data-wow-duration="2s">
+        <input type="email" ng-class='{mc_email:true}' ng-model="emailAccount" placeholder="Your email account" />
+        <button type="submit" id="mc_submit"><i class="icon"></i></button>
+    </ng-form>
+</section>
+
+
+
+
+
+<!--end of email subscribed section-->
+
+
+@*
+    <div ng-app="myApp">
+        <div ng-controller='IndexController'>
+            <p>{{message.text}}</p>
+            <input type="text" ng-model="inputText" />
+            {{inputText}}
+
+            <div ng-repeat="item in items ">
+                <span>{{item.name}}</span>
+            </div>
+
+
+        </div>
+
+
+
+            <form name="someForm"  ng-controller="FormController" ng-submit="requestSubmit()">
+                <input type="checkbox" ng-model="youCheckedIt">Check it
+                Start:@Html.TextBox("startEstimate", "", new Dictionary<string,object>
+                 {
+                     {"ng-model","funding.startingEstimate"},
+                     //{"ng-change","computeNeeded()"}
+                 })
+                 Recommedateion: {{funding.money}}
+
+                <button ng-disabled="!someForm.$valid">Sumbit the form</button>
+                <button ng-click="reset()">Reset</button>
+
+                <ul>
+                    <li ng-repeat="student in students">
+                        <a href="/home/index/View/{{student.id}}">{{student.name}}</a>
+                    </li>
+                </ul>
+
+                <table>
+                    <tr ng-repeat="student in students">
+                        <td>{{$index + 1}}</td>
+                        <td>{{student.name}}</td>
+                        <td>{{student.id}}</td>
+                    </tr>
+                </table>
+
+                <div ng-show="IdShow">
+                    <span>IdShow</span>
+                </div>
+                <div ng-show="IdHide">
+                    <span>IdHide</span>
+                </div>
+
+                <div>
+                    <span class="{{ngcondition}}">colour</span>
+                </div>
+
+                <div>
+                    <span ng-class="{selected:true}">colour</span>
+                </div>
+
+                <div>
+                    <span ng-click="count=10">set to 10</span>
+                </div>
+
+
+            </form>
+
+        <div ng-controller="cartController">
+            <div ng-repeat="item in items">
+                <span>{{item.title}}</span>
+                <input ng-model="item.quantity" required/>
+                <span>{{item.price | currency}}</span>
+                <span>{{item.price * item.quantity | currency}}</span>
+            </div>
+            <div>
+                <span>Total {{bill.total | currency}}</span>
+            </div>
+            <div>
+                <span>Discount {{bill.discount | currency}}</span>
+            </div>
+            <div>
+                <span>Subtotal {{bill.subtotal |currency }}</span>
+            </div>
+
+            <button ng-click="btnHttpTest()"> btn Http Test</button>
+
+            <button btn-directive> btn directive Test</button>
+        </div>
+
+
+
+
+
+
+    </div>*@
+
+<style>
+    .condition{
+        background-color:green;
+    }
+    .selected {
+        background-color:blue;
+    }
+
+</style>
+
+<div ng-controller="cartController">
+    <div ng-repeat="item in items">
+        <span>{{item.title}}</span>
+        <input ng-model="item.quantity" required/>
+        <span>{{item.price | currency}}</span>
+        <span>{{item.price * item.quantity | currency}}</span>
+    </div>
+    <div>
+        <span>Total {{bill.total | currency}}</span>
+    </div>
+    <div>
+        <span>Discount {{bill.discount | currency}}</span>
+    </div>
+    <div>
+        <span>Subtotal {{bill.subtotal |currency }}</span>
+    </div>
+
+    <button ng-click="btnHttpTest()"> btn Http Test</button>
+
+    <button btn-directive> btn directive Test</button>
+</div>
