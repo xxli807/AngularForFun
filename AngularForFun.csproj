@@ -161,6 +161,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\WebAPI\WebAPIAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
@@ -509,6 +510,7 @@
     <Content Include="Content\fonts\opensans-semibold.ttf" />
     <Content Include="Content\fonts\opensans-semibold.woff" />
     <Content Include="Content\MyCss\IndexController\StyleSheet1.scss" />
+    <Content Include="Areas\WebAPI\Views\Web.config" />
     <None Include="Scripts\Comlib\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\Angular\angular-animate.js" />
     <Content Include="Scripts\Angular\angular-animate.min.js" />
@@ -2793,6 +2795,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\WebAPI\Controllers\" />
+    <Folder Include="Areas\WebAPI\Models\" />
+    <Folder Include="Areas\WebAPI\Views\Shared\" />
     <Folder Include="Scripts\Angular\i18n\ngLocale\" />
   </ItemGroup>
   <ItemGroup>

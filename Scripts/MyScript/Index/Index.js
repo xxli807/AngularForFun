@@ -2,7 +2,7 @@
 (function(){
 
     var myApp = window.myAppModul;
-    myAppModul.controller('HeroSection', function ($scope) {
+    myApp.controller('HeroSection', function ($scope) {
 
     });
 
@@ -26,17 +26,13 @@
     });
 
     
-
-   
-
-
-
+     
 
     ////start the angular, for 1.3 using ngRoute otherwise, using []
-    var myAppModul = angular.module('myApp', ['ngRoute']);
+    //var myAppModuls = angular.module('myApp', ['ngRoute']);
     //window.angularStart = angular.module('myApp', ['ngRoute']);
     //start the controller
-    myAppModul.controller('IndexController', function ($scope) {
+    myApp.controller('IndexController', function ($scope) {
         var message = {
             text: "this is a test."
         };
@@ -50,7 +46,7 @@
         ];
     });
 
-    myAppModul.controller('FormController', function ($scope) {
+    myApp.controller('FormController', function ($scope) {
 
         $scope.youCheckedIt = true;
 
@@ -84,7 +80,7 @@
     });
      
 
-    myAppModul.controller('cartController', function ($scope, $http) {
+    myApp.controller('cartController', function ($scope, $http) {
 
         $scope.bill = { };
         

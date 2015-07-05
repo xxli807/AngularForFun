@@ -1,11 +1,11 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
- 
+
 
 @section scripts{
-        @Scripts.Render("~/Scripts/MyScript/Index/Index.js")
-    }
+    @Scripts.Render("~/Scripts/MyScript/Index/Index.js")
+}
 
 @section style{
     @Styles.Render("~/Content/MyCss/IndexController/Index.css");
@@ -16,7 +16,7 @@
     <div class="container">
         <div class="caption">
             <h1 class="text-uppercase animated fadeInLeft">Dota2 Heros</h1>
-            <input type="text"  ng-model="HeroNameSearch" />
+            <input type="text" ng-model="HeroNameSearch" />
         </div>
     </div>
 
@@ -55,97 +55,97 @@
 
 
 <!--end of email subscribed section-->
-    <div ng-app="myApp">
-        <div ng-controller='IndexController'>
-            <p>{{message.text}}</p>
-            <input type="text" ng-model="inputText" />
-            {{inputText}}
+<div>
+    <div ng-controller='IndexController'>
+        <p>{{message.text}}</p>
+        <input type="text" ng-model="inputText" />
+        {{inputText}}
 
-            <div ng-repeat="item in items ">
-                <span>{{item.name}}</span>
-            </div>
-
-
+        <div ng-repeat="item in items ">
+            <span>{{item.name}}</span>
         </div>
 
 
+    </div>
 
-            <form name="someForm"  ng-controller="FormController" ng-submit="requestSubmit()">
-                <input type="checkbox" ng-model="youCheckedIt">Check it
-                Start:@Html.TextBox("startEstimate", "", new Dictionary<string,object>
+
+
+    <form name="someForm" ng-controller="FormController" ng-submit="requestSubmit()">
+        <input type="checkbox" ng-model="youCheckedIt">Check it
+        Start:@Html.TextBox("startEstimate", "", new Dictionary<string,object>
                  {
                      {"ng-model","funding.startingEstimate"},
                      //{"ng-change","computeNeeded()"}
                  })
-                 Recommedateion: {{funding.money}}
+        Recommedateion: {{funding.money}}
 
-                <button ng-disabled="!someForm.$valid">Sumbit the form</button>
-                <button ng-click="reset()">Reset</button>
+        <button ng-disabled="!someForm.$valid">Sumbit the form</button>
+        <button ng-click="reset()">Reset</button>
 
-                <ul>
-                    <li ng-repeat="student in students">
-                        <a href="/home/index/View/{{student.id}}">{{student.name}}</a>
-                    </li>
-                </ul>
+        <ul>
+            <li ng-repeat="student in students">
+                <a href="/home/index/View/{{student.id}}">{{student.name}}</a>
+            </li>
+        </ul>
 
-                <table>
-                    <tr ng-repeat="student in students">
-                        <td>{{$index + 1}}</td>
-                        <td>{{student.name}}</td>
-                        <td>{{student.id}}</td>
-                    </tr>
-                </table>
+        <table>
+            <tr ng-repeat="student in students">
+                <td>{{$index + 1}}</td>
+                <td>{{student.name}}</td>
+                <td>{{student.id}}</td>
+            </tr>
+        </table>
 
-                <div ng-show="IdShow">
-                    <span>IdShow</span>
-                </div>
-                <div ng-show="IdHide">
-                    <span>IdHide</span>
-                </div>
+        <div ng-show="IdShow">
+            <span>IdShow</span>
+        </div>
+        <div ng-show="IdHide">
+            <span>IdHide</span>
+        </div>
 
-                <div>
-                    <span class="{{ngcondition}}">colour</span>
-                </div>
+        <div>
+            <span class="{{ngcondition}}">colour</span>
+        </div>
 
-                <div>
-                    <span ng-class="{selected:true}">colour</span>
-                </div>
+        <div>
+            <span ng-class="{selected:true}">colour</span>
+        </div>
 
-                <div>
-                    <span ng-click="count=10">set to 10</span>
-                </div>
-
-
-            </form>
-
-        <div ng-controller="cartController">
-            <div ng-repeat="item in items">
-                <span>{{item.title}}</span>
-                <input ng-model="item.quantity" required/>
-                <span>{{item.price | currency}}</span>
-                <span>{{item.price * item.quantity | currency}}</span>
-            </div>
-            <div>
-                <span>Total {{bill.total | currency}}</span>
-            </div>
-            <div>
-                <span>Discount {{bill.discount | currency}}</span>
-            </div>
-            <div>
-                <span>Subtotal {{bill.subtotal |currency }}</span>
-            </div>
-
-            <button ng-click="btnHttpTest()"> btn Http Test</button>
-
-            <button btn-directive> btn directive Test</button>
+        <div>
+            <span ng-click="count=10">set to 10</span>
         </div>
 
 
+    </form>
 
+    <div ng-controller="cartController">
+        <div ng-repeat="item in items">
+            <span>{{item.title}}</span>
+            <input ng-model="item.quantity" required />
+            <span>{{item.price | currency}}</span>
+            <span>{{item.price * item.quantity | currency}}</span>
+        </div>
+        <div>
+            <span>Total {{bill.total | currency}}</span>
+        </div>
+        <div>
+            <span>Discount {{bill.discount | currency}}</span>
+        </div>
+        <div>
+            <span>Subtotal {{bill.subtotal |currency }}</span>
+        </div>
 
+        <button ng-click="btnHttpTest()"> btn Http Test</button>
 
-
+        <button btn-directive> btn directive Test</button>
     </div>
+
+
+
+
+
+
+</div>
 
 <style>
     .condition{
@@ -160,7 +160,7 @@
 <div ng-controller="cartController">
     <div ng-repeat="item in items">
         <span>{{item.title}}</span>
-        <input ng-model="item.quantity" required/>
+        <input ng-model="item.quantity" required />
         <span>{{item.price | currency}}</span>
         <span>{{item.price * item.quantity | currency}}</span>
     </div>
